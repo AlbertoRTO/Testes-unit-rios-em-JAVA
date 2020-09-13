@@ -1,0 +1,14 @@
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/exceptions/LocadoraException.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/servicos/TimerService.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/servicos/Calculadora.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/entidades/Locacao.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/entidades/Usuario.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/utils/DataUtils.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/servicos/EmailService.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/servicos/LocacaoService.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/exceptions/FilmeSemEstoqueException.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/entidades/Filme.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/exceptions/NaoPodeDividirPorZeroException.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/daos/LocacaoDAOFake.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/servicos/SPCService.java
+/Users/wcaquino/Desktop/TestesUnitarios/src/main/java/br/ce/wcaquino/daos/LocacaoDAO.java

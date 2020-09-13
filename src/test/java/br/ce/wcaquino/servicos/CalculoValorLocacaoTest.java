@@ -9,13 +9,19 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
+import br.ce.wcaquino.daos.LocacaoDAO;
 import br.ce.wcaquino.entidades.Filme;
 import br.ce.wcaquino.entidades.Locacao;
 import br.ce.wcaquino.entidades.Usuario;
@@ -25,7 +31,14 @@ import br.ce.wcaquino.exceptions.LocadoraException;
 @RunWith(Parameterized.class)
 public class CalculoValorLocacaoTest {
 
+	@InjectMocks
 	private LocacaoService service;
+	
+	@Mock
+	private LocacaoDAO dao;
+	
+	@Mock
+	private SPCService spc;
 	
 	@Parameter
 	public List<Filme> filmes;
@@ -38,7 +51,19 @@ public class CalculoValorLocacaoTest {
 	
 	@Before
 	public void setup(){
-		service = new LocacaoService();
+		MockitoAnnotations.initMocks(this);
+		System.out.println("Iniciando 3...");
+		CalculadoraTest.ordem.append(3);
+	}
+	
+	@After
+	public void tearDown(){
+		System.out.println("finalizando 3...");
+	}
+	
+	@AfterClass
+	public static void tearDownClass(){
+		System.out.println(CalculadoraTest.ordem.toString());
 	}
 	
 	private static Filme filme1 = umFilme().agora();
@@ -62,9 +87,11 @@ public class CalculoValorLocacaoTest {
 	}
 	
 	@Test
-	public void deveCalcularValorLocacaoConsiderandoDescontos() throws FilmeSemEstoqueException, LocadoraException{
+	public void deveCalcularValorLocacaoConsiderandoDescontos() throws FilmeSemEstoqueException, LocadoraException, InterruptedException{
 		//cenario
 		Usuario usuario = umUsuario().agora();
+		
+		Thread.sleep(5000);
 		
 		//acao
 		Locacao resultado = service.alugarFilme(usuario, filmes);
